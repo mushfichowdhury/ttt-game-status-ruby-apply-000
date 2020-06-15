@@ -43,11 +43,41 @@ def won?(board)
     
     
     if position_1 == "X" && position_2 == "X" && position_3 == "X"
+     return WIN_COMBINATIONS[0]
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+     return WIN_COMBINATIONS[0]
+     
+    elsif position_4 == "X" && position_5 == "X" && position_6 == "X"
+     return WIN_COMBINATIONS[1]
+    elsif position_4 == "O" && position_5 == "O" && position_6 == "O"
+     return WIN_COMBINATIONS[1]
+     
+    elsif position_7 == "X" && position_8 == "X" && position_9 == "X"
+     return WIN_COMBINATIONS[2]
+    elsif position_7 == "O" && position_8 == "O" && position_9 == "O"
+     return WIN_COMBINATIONS[2]
+     
+      elsif position_1 == "X" && position_4 == "X" && position_7 == "X"
+     return WIN_COMBINATIONS[3]
+    elsif position_1 == "O" && position_4 == "O" && position_7 == "O"
+     return WIN_COMBINATIONS[3]
+     
+      elsif position_1 == "X" && position_2 == "X" && position_3 == "X"
      return win_combination
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
      return win_combination
      
-    elsif position_1 == "X" && position_2 == "X" && position_3 == "X"
+      elsif position_1 == "X" && position_2 == "X" && position_3 == "X"
+     return win_combination
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+     return win_combination
+     
+      elsif position_1 == "X" && position_2 == "X" && position_3 == "X"
+     return win_combination
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+     return win_combination
+     
+      elsif position_1 == "X" && position_2 == "X" && position_3 == "X"
      return win_combination
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
      return win_combination

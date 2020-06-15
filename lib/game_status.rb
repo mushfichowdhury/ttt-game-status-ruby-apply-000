@@ -8,7 +8,7 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
-    
+    index_0 = win_combination[0]
     if win_combination[0] == "X" && win_combination[1] == "X" && win_combination[2] == "X"
      return WIN_COMBINATIONS[0]
     else

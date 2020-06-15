@@ -13,6 +13,8 @@ def won?(board)
     index_1 = win_combination[1]
     index_2 = win_combination[2]
     
+    
+    
     if win_combination[0] == "X" && win_combination[1] == "X" && win_combination[2] == "X"
      return WIN_COMBINATIONS[0]
     else

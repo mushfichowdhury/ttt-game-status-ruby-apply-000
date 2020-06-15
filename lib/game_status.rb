@@ -4,6 +4,8 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
+
+
 def won?(board)
   WIN_COMBINATIONS.each do |win_index|
     if win_index[0] == "X" && win_index[1] == "X" && win_index[2] == "X"

@@ -28,26 +28,44 @@ def won?(board)
     position_3 = board[win_index_3]
     
     if position_1 == "X" && position_2 == "X" && position_3 == "X"
-     return WIN_COMBINATIONS[0]
+      return win_combination
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-     return WIN_COMBINATIONS[0]
-     
-    elsif position_4 == "X" && position_5 == "X" && position_6 == "X"
-     return WIN_COMBINATIONS[1]
-    elsif position_4 == "O" && position_5 == "O" && position_6 == "O"
-     return WIN_COMBINATIONS[1]
-     
-    elsif position_7 == "X" && position_8 == "X" && position_9 == "X"
-     return WIN_COMBINATIONS[2]
-    elsif position_7 == "O" && position_8 == "O" && position_9 == "O"
-     return WIN_COMBINATIONS[2]
-     
-      elsif position_1 == "X" && position_4 == "X" && position_7 == "X"
-     return WIN_COMBINATIONS[3]
-    elsif position_1 == "O" && position_4 == "O" && position_7 == "O"
-     return WIN_COMBINATIONS[3]
+      return win_combination
     end
+  end
+  return false
+end
+
+def full?(board)
+  board.all? {|index| index == "X" || index == "O"}
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  else
     return false
   end
 end
 
+def over?(board)
+  if won?(board) || full?(board) || draw?(board)
+    return true
+  else
+    return false
+  end
+end
+
+def winner (board)
+  index = []
+  index = won?(board)
+  if index == false
+    return nil
+  else
+    if board[index[0]] == "X"
+      return "X"
+    else
+      return "O"
+    end
+  end
+end

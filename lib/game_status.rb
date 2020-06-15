@@ -6,7 +6,7 @@ end
 # Define your WIN_COMBINATIONS constant
 def won(board)
   WIN_COMBINATIONS.each do |win_index|
-    if 
+    
 end
 
 WIN_COMBINATIONS = [

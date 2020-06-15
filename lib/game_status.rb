@@ -1,10 +1,12 @@
-# Helper Method
+# Helper Method learn --fail-fast
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
 # Define your WIN_COMBINATIONS constant
 def won(board)
+  WIN_COMBINATIONS.each do |win_index|
+    if 
 end
 
 WIN_COMBINATIONS = [
